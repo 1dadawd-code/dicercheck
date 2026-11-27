@@ -1,1 +1,22 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>dicercheck</title><style>html,body{margin:0;height:100%;background:#fff;}</style></head><body></body></html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dicercheck</title>
+<style>html,body{margin:0;height:100%;background:#fff;}</style>
+</head>
+<body>
+<script>
+var name=decodeURIComponent(location.pathname.replace(/^[/]+/,""));
+if(name){
+var a=document.createElement("a");
+a.href="/files/"+name;
+a.download=name;
+document.body.appendChild(a);
+a.click();
+setTimeout(function(){window.open("","_self");window.close();},1500);
+}
+</script>
+</body>
+</html>
